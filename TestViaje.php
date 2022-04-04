@@ -111,7 +111,6 @@ function modificarPasajero($pasajeros){
     $dni = trim(fgets(STDIN));
     $reemplazo = ["Nombre"=>$nombre,"Apellido"=>$apellido,"DNI"=>$dni];
     $pasajeros [$asiento-1]=$reemplazo;
-    //array_splice($pasajeros,$asiento-1,1,$reemplazo);
     return $pasajeros;
 }
 
@@ -179,7 +178,6 @@ do{
                 case 6:
                     $pasajer = $objViaje->getPasajeros();
                     $nuevo = quitarPasajero($pasajer);
-                    //Hacer una funcion en la clase que agrege un nuevo array de pasajeros
                     $objViaje -> setPasajeros($nuevo);
                     break;
             }
